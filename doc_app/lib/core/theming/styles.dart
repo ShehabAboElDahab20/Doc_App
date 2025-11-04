@@ -23,4 +23,19 @@ class Styles {
     color: Colors.white,
     fontWeight: FontWeight.w600,
   );
+  static const TextStyle text24Weight700maincolor = TextStyle(
+    fontSize: 24,
+    color: AppColors.mainBlue,
+    fontWeight: FontWeight.w700,
+  );
+  static const TextStyle text14Weight400gray = TextStyle(
+    fontSize: 14,
+    color: AppColors.gray,
+    fontWeight: FontWeight.w400,
+  );
+  static const TextStyle text12Weight400maincolor = TextStyle(
+    fontSize: 12,
+    color: AppColors.mainBlue,
+    fontWeight: FontWeight.w400,
+  );
 }
