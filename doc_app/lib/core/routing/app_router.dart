@@ -24,11 +24,10 @@ class AppRouter {
           child: const LoginScreen(),
         ),
       ),
-      // GoRoute(
-      //   path: '/login',
-      //   name: 'login',
-      //   builder: (context, state) => const LoginScreen(),
-      // ),
+      GoRoute(
+        path: Routes.homeScreen,
+        builder: (context, state) => const LoginScreen(),
+      ),
     ],
   );
 }
