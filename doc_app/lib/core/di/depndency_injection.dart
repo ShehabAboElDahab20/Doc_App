@@ -5,6 +5,8 @@ import 'package:flutter_complete_project/features/login/logic/cubit/login_cubit.
 import 'package:get_it/get_it.dart';
 
 import '../../features/login/data/repos/login_repo.dart';
+import '../../features/register/data/repo/sign_up_repo.dart';
+import '../../features/register/logic/cubit/signup_cubit.dart';
 
 final getIt = GetIt.instance;
 Future<void> setupGetIt() async {
@@ -13,5 +15,8 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
 //login repo and cubit
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt()));
-  getIt.registerLazySingleton<LoginCubit>(() => LoginCubit(getIt()));
+  getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt()));
+  // SignUp repo and cubit
+  getIt.registerLazySingleton<SignUpRepo>(() => SignUpRepo(getIt()));
+  getIt.registerFactory<SignupCubit>(() => SignupCubit(getIt()));
 }
